@@ -10,7 +10,7 @@ abstract class Styles{
 
   static TextStyle textStyle48 = const TextStyle(
     //todo : replace here with color_app corresponding color 
-    color: Color(0x000000),
+    color: Color(0x00000000),
     fontSize: 48,
     fontWeight: FontWeight.w700
   );
