@@ -4,7 +4,7 @@ import 'package:lottie/lottie.dart';
 
 import 'package:mini_chat_app/core/themes/styles.dart';
 import 'package:mini_chat_app/core/constants/asset_images.dart';
-import 'package:mini_chat_app/features/authentication/login/presentation/login_screen.dart';
+import 'package:mini_chat_app/features/authentication/login/presentation/view/login_view.dart';
 
 
 
@@ -21,6 +21,6 @@ class SplashScreen extends StatelessWidget {
           Text("Stay Connected!", style: Styles.textStyle24,)
         ],
       )
-     , nextScreen:const LogIn(), splashIconSize: 500,);
+     , nextScreen:const LogInView(), splashIconSize: 500,);
   }
 }
