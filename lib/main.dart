@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mini_chat_app/features/onboarding/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,11 +16,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        textTheme: GoogleFonts.interTextTheme(),
+        //colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        //textTheme: GoogleFonts.interTextTheme(),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const SplashScreen(),
     );
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mini_chat_app/core/themes/color_App.dart';
 
 abstract class Styles{
   static TextStyle textStyle24 = const TextStyle(
