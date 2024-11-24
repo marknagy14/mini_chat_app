@@ -13,13 +13,15 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  AnimatedSplashScreen(splash:
-      Column(mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          LottieBuilder.asset(AssetImages.logoAnimated),
-          const SizedBox(height: 60),
-          Text("Stay Connected!", style: Styles.textStyle24,)
-        ],
+    return AnimatedSplashScreen(splash:
+      SingleChildScrollView(
+        child: Column(mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            LottieBuilder.asset(AssetImages.logoAnimated),
+            const SizedBox(height: 60),
+            Text("Stay Connected!", style: Styles.textStyle24,)
+          ],
+        ),
       )
      , nextScreen:const LogInView(), splashIconSize: 500,);
   }

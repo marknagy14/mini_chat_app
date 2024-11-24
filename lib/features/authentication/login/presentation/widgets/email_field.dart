@@ -16,14 +16,6 @@ class EmailField extends StatelessWidget {
      hint: "Enter your email",
      label: "Email",
      prefix: Icons.email,
-     validate: (value) {
-       if(value!.isEmpty){
-        return "please enter valid email";
-       }
-       else{
-        return null;
-       }
-     },
     );
   }
 }

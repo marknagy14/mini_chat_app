@@ -16,14 +16,6 @@ class PasswordField extends StatelessWidget {
      hint: "Enter your password",
      label: "Password",
      prefix: Icons.lock,
-     validate: (value) {
-       if(value!.isEmpty){
-        return "please enter valid password";
-       }
-       else{
-        return null;
-       }
-     },
      isObsecure: !isVisible,
     suffix: (!isVisible) ? Icons.visibility: Icons.visibility_off
     , pressed:toggleVisibility);

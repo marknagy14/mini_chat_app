@@ -48,12 +48,19 @@ class _LoginBodyState extends State<LoginBody> {
                     });
                   }),
               const SizedBox(height: 20),
-              const LoginButton(),
+               LoginButton(emailController: emailController, passwordController: passwordController,
+               onSuccess: () {
+                 // todo :Navigate to the home screen
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => HomeScreen()),
+                  // );
+               },
+              ),
               const SizedBox(height: 20),
               SignUpPrompt(
                 onSignUpTap: () {
                   // todo :Navigate to the sign-up screen
-                  print("navigate to sign up screen");
                   // Navigator.push(
                   //   context,
                   //   MaterialPageRoute(builder: (context) => SignUpScreen()),
