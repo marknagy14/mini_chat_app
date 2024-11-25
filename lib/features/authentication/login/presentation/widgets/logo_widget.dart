@@ -6,7 +6,6 @@ class LogoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: Image.asset(AssetImages.logo)
-    ,height: 300,width: 280,alignment: Alignment.topCenter);
+    return Container(height: 250,width: 280,alignment: Alignment.topCenter, child: Image.asset(AssetImages.logo));
   }
 }

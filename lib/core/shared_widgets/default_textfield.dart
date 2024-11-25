@@ -16,6 +16,8 @@ IconData? suffix,
 Function()? pressed,
 Function()? tap,
 bool? enable,
+Widget? prefixWidget,
+FocusNode? focusNode
 
 }) => TextFormField(
   controller: controller,
@@ -24,7 +26,7 @@ bool? enable,
   // validator: validate,
   decoration: InputDecoration(labelText: label,
     hintText: hint,
-    prefixIcon: Icon(prefix),
+    prefixIcon: prefixWidget ?? Icon(prefix),
     suffixIcon: suffix != null? IconButton(icon: Icon(suffix), onPressed: pressed
      ,)
      : null,
@@ -32,6 +34,7 @@ bool? enable,
      ),
      focusedBorder: const OutlineInputBorder(borderSide: BorderSide(color:ColorApp.primaryColor,width:2.0))),
      obscureText: isObsecure,
+     focusNode: focusNode,
      onTap: tap,
      enabled: enable,
 );

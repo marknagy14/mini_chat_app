@@ -5,9 +5,10 @@ import 'package:mini_chat_app/features/authentication/login/presentation/widgets
 import 'package:mini_chat_app/features/authentication/login/presentation/widgets/logo_widget.dart';
 import 'package:mini_chat_app/features/authentication/login/presentation/widgets/password_field.dart';
 import 'package:mini_chat_app/features/authentication/login/presentation/widgets/signup_prompt.dart';
+import 'package:mini_chat_app/features/authentication/signup/presentation/view/signup_view.dart';
 
 class LoginBody extends StatefulWidget {
-  LoginBody({
+  const LoginBody({
     super.key,
   });
 
@@ -36,9 +37,9 @@ class _LoginBodyState extends State<LoginBody> {
             children: [
               const LogoWidget(),
               const LoginTitle(),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               EmailField(controller: emailController),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               PasswordField(
                   controller: passwordController,
                   isVisible: isVisible,
@@ -47,7 +48,7 @@ class _LoginBodyState extends State<LoginBody> {
                       isVisible = !isVisible;
                     });
                   }),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
                LoginButton(emailController: emailController, passwordController: passwordController,
                onSuccess: () {
                  // todo :Navigate to the home screen
@@ -57,14 +58,13 @@ class _LoginBodyState extends State<LoginBody> {
                   // );
                },
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               SignUpPrompt(
                 onSignUpTap: () {
-                  // todo :Navigate to the sign-up screen
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SignUpScreen()),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const SignUpView()),
+                  );
                 },
               ),
             ],

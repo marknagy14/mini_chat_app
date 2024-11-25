@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../widgets/login_body.dart';
+import 'package:mini_chat_app/features/authentication/signup/presentation/view/widgets/signup_body.dart';
 
-class LogInView extends StatelessWidget {
-  const LogInView({super.key});
+class SignUpView extends StatelessWidget {
+  const SignUpView({super.key});
 
   @override
-  Widget build(BuildContext context) {
+   Widget build(BuildContext context) {
     return SafeArea(
       child: GestureDetector(
         onTap: () {
@@ -13,7 +13,7 @@ class LogInView extends StatelessWidget {
           FocusScope.of(context).unfocus();
         },
         child: const Scaffold(
-          body: LoginBody(),
+          body: SignUpBody(),
         ),
       ),
     );
